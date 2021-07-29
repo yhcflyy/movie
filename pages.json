@@ -3,10 +3,7 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "首页",
-				"app-plus":{
-					"titleNView":false
-				}
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
@@ -28,29 +25,31 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"tabBar":{
+	"tabBar": {
 		// "borderStyle": "#f0f0f0",
-		"color":"#bfbfbf",
-		"selectedColor":"#707070",
-		"backgroundColor":"white",
-		"list":[
-			{
-				"pagePath" : "pages/home/home",
-				"text" : "首页",
-				"iconPath":"static/tabbar_home_nor.png",
-				"selectedIconPath":"static/tabbar_home_sel.png"
+		"color": "#bfbfbf",
+		"selectedColor": "#707070",
+		"backgroundColor": "white",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/tabbar_home_nor.png",
+				"selectedIconPath": "static/tabbar_home_sel.png"
 			},
 			{
-				"pagePath" : "pages/search/search",
-				"text" : "搜索",
-				"iconPath":"static/tabbar_search_nor.png",
-				"selectedIconPath":"static/tabbar_search_sel.png"
-			},{
-				"pagePath" : "pages/mine/mine",
-				"text" : "我",
-				"iconPath":"static/tabbar_mine_nor.png",
-				"selectedIconPath":"static/tabbar_mine_sel.png"
+				"pagePath": "pages/search/search",
+				"text": "搜索",
+				"iconPath": "static/tabbar_search_nor.png",
+				"selectedIconPath": "static/tabbar_search_sel.png"
+			}, {
+				"pagePath": "pages/mine/mine",
+				"text": "我",
+				"iconPath": "static/tabbar_mine_nor.png",
+				"selectedIconPath": "static/tabbar_mine_sel.png"
 			}
 		]
+	},
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	}
 }

@@ -6,6 +6,8 @@ const request = (config) => {
 	if(!config.data){
 		config.data = {};
 	}
+	
+
 	let promise = new Promise(function(resolve, reject) {
 		uni.request(config).then(responses => {
 			// 异常
