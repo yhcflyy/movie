@@ -11,13 +11,15 @@ function getSwiperList() {
 	})
 }
 
-function getRecomendList() {
+function getRecomendList(page,pageSize) {
+	if (page === undefined) page = 0
+	if (pageSize == undefined) pageSize = 5
 	return request({
 		method: "GET",
 		url: "/tomato/gae/video/home",
 		data: {
-			"page": 0,
-			"size": 10
+			"page": page,
+			"size": pageSize,
 		}
 	})
 }

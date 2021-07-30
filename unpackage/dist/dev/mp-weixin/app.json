@@ -2,7 +2,9 @@
   "pages": [
     "pages/home/home",
     "pages/search/search",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/hot/hot"
   ],
   "subPackages": [],
   "window": {

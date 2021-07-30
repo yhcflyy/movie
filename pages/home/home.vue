@@ -3,7 +3,8 @@
 		<swiper class="swiperStyle" autoplay="true" indicator-dots="true" circular="true" indicator-active-color="white"
 			indicator-color="grey">
 			<swiper-item v-for="item in bannerItems" :key="item.id">
-				<image v-bind:src="item.img" class="swiper-image" mode="aspectFill" webp="true" :lazy-load="true"></image>
+				<image v-bind:src="item.img" class="swiper-image" mode="aspectFill" webp="true" :lazy-load="true">
+				</image>
 				<!-- <u-image width="100%" height="100%" :src="item.img" mode="aspectFill" :lazy-load="true"></u-image> -->
 				<view class="swiper_bottom">
 					<text class="swiper-item-text">{{item.title}}</text>
@@ -11,8 +12,17 @@
 			</swiper-item>
 		</swiper>
 		<view class="album" v-for="item in recommendItems" :key="item.albumId">
-			<view class="album-top">{{item.albumTitle}}</view>
-			<view class="album-container">
+			<view class="album-top">
+				<image style="width: 50rpx;height: 50rpx;" src="../../static/hot.png"></image>
+				<text style="font-size: 16px; margin-left: 10rpx;">{{item.albumTitle}}</text>
+				<view style="flex-grow: 1;"></view>
+
+				<view style="display: flex;align-items: center;" @click="moreAlbum">
+					<text style="font-size: 12px; margin-left: 10rpx;">更多</text>
+					<image style="width: 35rpx;height: 35rpx;" src="../../static/right-arrow.png"></image>
+				</view>
+			</view>
+			<view class="album-container" @click="gotoDetailPage">
 				<view class="album-item" v-for="video in item.videoList" :key="video.videoId">
 					<image v-bind:src="video.imgUrl" :mode="video.imageMode" webp="true" class="swiper-image"
 						:lazy-load="true" @error="imageError(video)"></image>
@@ -22,7 +32,7 @@
 				</view>
 			</view>
 		</view>
-
+	<u-loadmore :status="loadMoreStatus" v-if="recommendItems.length > 0"></u-loadmore>
 	</view>
 </template>
 
@@ -32,40 +42,88 @@
 		data() {
 			return {
 				bannerItems: [],
-				recommendItems: []
+				recommendItems: [],
+				page: 0,
+				loadMoreStatus : "loading"
 			}
 		},
 		onLoad() {
-			swiperApi.getSwiperList().then(res => {
-				let items = res;
-				items.forEach(function(elem){
-					// #ifdef APP-PLUS
-						elem.img = elem.img.replace(".webp",".jpg")
-					// #endif
-				})
-				this.bannerItems = res;
-			})
-			swiperApi.getRecomendList().then(res => {
-				let items = res.items;
-				items.forEach(function(item) {
-					item.videoList.forEach(function(video) {
-						video.imageMode = 'aspectFill';
-						if (video.imgUrl.endsWith(".webp")) {
-							// #ifdef APP-PLUS  
-								video.imgUrl = video.imgUrl.replace(".webp",".jpg")
-							// #endif
-						}
-					})
-				})
-				this.recommendItems = res.items;
-			})
+			uni.startPullDownRefresh()
+		},
+		onPullDownRefresh() {
+			this.refresh()
+		},
+		onReachBottom() {
+			this.loadMore()
 		},
 		methods: {
 			imageError: function(e) {
 				e.imgUrl = '/static/image_error_white.png'
 				e.imageMode = 'center'
-				console.log(e.imgUrl)
+			},
+			gotoDetailPage: function(e) {
+				uni.navigateTo({
+					url: '../index/index'
+				})
+			},
+			moreAlbum: function(e) {
+				uni.navigateTo({
+					url: '../hot/hot'
+				})
+			},
+			refresh(page) {
+				let bannerList = swiperApi.getSwiperList();
+				let recomendList = swiperApi.getRecomendList();
+				Promise.all([bannerList, recomendList]).then(res => {
+					//banner
+					let items = res[0];
+					items.forEach(function(elem) {
+						// #ifdef APP-PLUS
+						elem.img = elem.img.replace(".webp", ".jpg")
+						// #endif
+					})
+					this.bannerItems = items;
+
+					//recommend
+					let recommendList = res[1].items;
+					this.replaceWebp(recommendList)
+					this.recommendItems = recommendList;
+					uni.stopPullDownRefresh()
+					this.page = 1;
+				}).catch(error => {
+					console.log(error);
+					uni.stopPullDownRefresh()
+				});
+			},
+			loadMore(){
+				this.loadMoreStatus = "loading"
+				swiperApi.getRecomendList(this.page).then(res => {
+					this.replaceWebp(res.items)
+					this.recommendItems = this.recommendItems.concat(res.items)
+					this.page++;
+					if (this.page >= res.totalPages){
+						this.loadMoreStatus = "nomore"
+					}else{
+						this.loadMoreStatus = "loadmore"
+					}
+				}).catch(error =>{
+					this.loadMoreStatus = "loadmore"
+				});
+				
+			},
+			replaceWebp(recommendList){
+				recommendList.forEach(function(item) {
+					item.videoList.forEach(function(video) {
+						video.imageMode = 'aspectFill';
+						if (video.imgUrl.endsWith(".webp")) {
+							// #ifdef APP-PLUS  
+							video.imgUrl = video.imgUrl.replace(".webp", ".jpg")
+							// #endif
+						}
+					})
+				})
 			}
+			
 		}
 	}
 </script>
@@ -119,6 +177,16 @@
 		column-gap: 15rpx;
 		justify-content: space-between;
 		margin-bottom: 15rpx;
+	}
+
+	.album-top {
+		/* 	margin-left: 15rpx;
+		margin-right: 15rpx;
+		margin-bottom: 15rpx; */
+		margin: 15rpx;
+		display: flex;
+		align-items: center;
+		/* height: 60rpx; */
 	}
 
 	.album-item {

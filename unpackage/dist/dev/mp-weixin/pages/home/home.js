@@ -93,6 +93,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uLoadmore: function() {
+      return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-loadmore/u-loadmore */ "node-modules/uview-ui/components/u-loadmore/u-loadmore").then(__webpack_require__.bind(null, /*! uview-ui/components/u-loadmore/u-loadmore.vue */ 76))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -130,7 +153,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -187,17 +220,65 @@ var _swiperapi = _interopRequireDefault(__webpack_require__(/*! ../../common/api
 //
 //
 //
-var _default = { data: function data() {return { bannerItems: [], recommendItems: [] };}, onLoad: function onLoad() {var _this = this;_swiperapi.default.getSwiperList().then(function (res) {var items = res;items.forEach(function (elem) {});_this.bannerItems = res;});_swiperapi.default.getRecomendList().then(function (res) {var items = res.items;items.forEach(function (item) {item.videoList.forEach(function (video) {video.imageMode = 'aspectFill';if (video.imgUrl.endsWith(".webp")) {}});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { bannerItems: [], recommendItems: [], page: 0, loadMoreStatus: "loading" };}, onLoad: function onLoad() {uni.startPullDownRefresh();}, onPullDownRefresh: function onPullDownRefresh() {this.refresh();}, onReachBottom: function onReachBottom() {this.loadMore();}, methods: { imageError: function imageError(e) {e.imgUrl = '/static/image_error_white.png';e.imageMode = 'center';}, gotoDetailPage: function gotoDetailPage(e) {uni.navigateTo({ url: '../index/index' });}, moreAlbum: function moreAlbum(e) {uni.navigateTo({ url: '../hot/hot' });}, refresh: function refresh(page) {var _this = this;var bannerList = _swiperapi.default.getSwiperList();var recomendList = _swiperapi.default.getRecomendList();Promise.all([bannerList, recomendList]).then(function (res) {//banner
+        var items = res[0];
+        items.forEach(function (elem) {
+
+
+
+        });
+        _this.bannerItems = items;
+
+        //recommend
+        var recommendList = res[1].items;
+        _this.replaceWebp(recommendList);
+        _this.recommendItems = recommendList;
+        uni.stopPullDownRefresh();
+        _this.page = 1;
+      }).catch(function (error) {
+        console.log(error);
+        uni.stopPullDownRefresh();
       });
-      _this.recommendItems = res.items;
-    });
-  },
-  methods: {
-    imageError: function imageError(e) {
-      e.imgUrl = '/static/image_error_white.png';
-      e.imageMode = 'center';
-      console.log(e.imgUrl);
+    },
+    loadMore: function loadMore() {var _this2 = this;
+      this.loadMoreStatus = "loading";
+      _swiperapi.default.getRecomendList(this.page).then(function (res) {
+        _this2.replaceWebp(res.items);
+        _this2.recommendItems = _this2.recommendItems.concat(res.items);
+        _this2.page++;
+        if (_this2.page >= res.totalPages) {
+          _this2.loadMoreStatus = "nomore";
+        } else {
+          _this2.loadMoreStatus = "loadmore";
+        }
+      }).catch(function (error) {
+        _this2.loadMoreStatus = "loadmore";
+      });
+
+    },
+    replaceWebp: function replaceWebp(recommendList) {
+      recommendList.forEach(function (item) {
+        item.videoList.forEach(function (video) {
+          video.imageMode = 'aspectFill';
+          if (video.imgUrl.endsWith(".webp")) {
+
+
+
+          }
+        });
+      });
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

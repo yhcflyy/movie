@@ -3,7 +3,8 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -17,6 +18,11 @@
 			"style": {
 				"navigationBarTitleText": "我"
 			}
+		},
+		{
+			"path":"pages/index/index"
+		},{
+			"path":"pages/hot/hot"
 		}
 	],
 	"globalStyle": {
