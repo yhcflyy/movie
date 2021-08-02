@@ -24,7 +24,32 @@ function getRecomendList(page,pageSize) {
 	})
 }
 
+function getDiscoveryList(page,pageSize){
+	if (page === undefined) page = 0
+	if (pageSize == undefined) pageSize = 5
+	return request({
+		method: "GET",
+		url: "/tomato/gae/video/discovery",
+		data: {
+			"page": page,
+			"size": pageSize,
+		}
+	})
+}
+
+function getAlbumList(albumId){
+	return request({
+		method: "GET",
+		url: "/tomato/gae/video/album",
+		data: {
+			"albumId": albumId,
+		}
+	})
+}
+
 export default {
 	getSwiperList,
 	getRecomendList,
+	getDiscoveryList,
+	getAlbumList,
 }

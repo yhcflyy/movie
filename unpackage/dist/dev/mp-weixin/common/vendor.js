@@ -8008,9 +8008,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!**************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/pages.json ***!
-  \**************************************************************/
+/*!*****************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/pages.json ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8151,9 +8151,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 11 */
-/*!**********************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/index.js ***!
-  \**********************************************************************************/
+/*!*************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/index.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8302,9 +8302,9 @@ var install = function install(Vue) {
 
 /***/ }),
 /* 12 */
-/*!*********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/mixin/mixin.js ***!
-  \*********************************************************************************************/
+/*!************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/mixin/mixin.js ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8375,9 +8375,9 @@ var install = function install(Vue) {
 
 /***/ }),
 /* 13 */
-/*!***********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/request/index.js ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/request/index.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8555,9 +8555,9 @@ new Request();exports.default = _default;
 
 /***/ }),
 /* 14 */
-/*!****************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/deepMerge.js ***!
-  \****************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/deepMerge.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8595,9 +8595,9 @@ deepMerge;exports.default = _default;
 
 /***/ }),
 /* 15 */
-/*!****************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/deepClone.js ***!
-  \****************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/deepClone.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8628,9 +8628,9 @@ deepClone;exports.default = _default;
 
 /***/ }),
 /* 16 */
-/*!***********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/test.js ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/test.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8869,9 +8869,9 @@ function code(value) {var len = arguments.length > 1 && arguments[1] !== undefin
 
 /***/ }),
 /* 17 */
-/*!******************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/queryParams.js ***!
-  \******************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/queryParams.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8937,9 +8937,9 @@ queryParams;exports.default = _default;
 
 /***/ }),
 /* 18 */
-/*!************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/route.js ***!
-  \************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/route.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9858,9 +9858,9 @@ if (hadRuntime) {
 
 /***/ }),
 /* 22 */
-/*!*****************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/timeFormat.js ***!
-  \*****************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/timeFormat.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9919,9 +9919,9 @@ timeFormat;exports.default = _default;
 
 /***/ }),
 /* 23 */
-/*!***************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/timeFrom.js ***!
-  \***************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/timeFrom.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9976,9 +9976,9 @@ timeFrom;exports.default = _default;
 
 /***/ }),
 /* 24 */
-/*!********************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/colorGradient.js ***!
-  \********************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/colorGradient.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10119,9 +10119,9 @@ function colorToRgba(color) {var alpha = arguments.length > 1 && arguments[1] !=
 
 /***/ }),
 /* 25 */
-/*!***********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/guid.js ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/guid.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10170,9 +10170,9 @@ guid;exports.default = _default;
 
 /***/ }),
 /* 26 */
-/*!************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/color.js ***!
-  \************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/color.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10217,9 +10217,9 @@ color;exports.default = _default;
 
 /***/ }),
 /* 27 */
-/*!****************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/type2icon.js ***!
-  \****************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/type2icon.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10262,9 +10262,9 @@ type2icon;exports.default = _default;
 
 /***/ }),
 /* 28 */
-/*!******************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/randomArray.js ***!
-  \******************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/randomArray.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10279,9 +10279,9 @@ randomArray;exports.default = _default;
 
 /***/ }),
 /* 29 */
-/*!**************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/addUnit.js ***!
-  \**************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/addUnit.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10297,9 +10297,9 @@ function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefin
 
 /***/ }),
 /* 30 */
-/*!*************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/random.js ***!
-  \*************************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/random.js ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10317,9 +10317,9 @@ random;exports.default = _default;
 
 /***/ }),
 /* 31 */
-/*!***********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/trim.js ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/trim.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10342,9 +10342,9 @@ trim;exports.default = _default;
 
 /***/ }),
 /* 32 */
-/*!************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/toast.js ***!
-  \************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/toast.js ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10362,9 +10362,9 @@ toast;exports.default = _default;
 
 /***/ }),
 /* 33 */
-/*!****************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/getParent.js ***!
-  \****************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/getParent.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10419,9 +10419,9 @@ function getParent(name, keys) {
 
 /***/ }),
 /* 34 */
-/*!**************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/$parent.js ***!
-  \**************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/$parent.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10447,9 +10447,9 @@ function $parent() {var name = arguments.length > 0 && arguments[0] !== undefine
 
 /***/ }),
 /* 35 */
-/*!**********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/sys.js ***!
-  \**********************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/sys.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10465,9 +10465,9 @@ function sys() {
 
 /***/ }),
 /* 36 */
-/*!***************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/debounce.js ***!
-  \***************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/debounce.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10504,9 +10504,9 @@ debounce;exports.default = _default;
 
 /***/ }),
 /* 37 */
-/*!***************************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/function/throttle.js ***!
-  \***************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/function/throttle.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10546,9 +10546,9 @@ throttle;exports.default = _default;
 
 /***/ }),
 /* 38 */
-/*!***********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/config/config.js ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/config/config.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10569,9 +10569,9 @@ var version = '1.8.3';var _default =
 
 /***/ }),
 /* 39 */
-/*!***********************************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/node_modules/uview-ui/libs/config/zIndex.js ***!
-  \***********************************************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/node_modules/uview-ui/libs/config/zIndex.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10604,9 +10604,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 44 */,
 /* 45 */,
 /* 46 */
-/*!***************************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/common/api/swiperapi.js ***!
-  \***************************************************************************/
+/*!******************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/common/api/swiperapi.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10635,17 +10635,42 @@ function getRecomendList(page, pageSize) {
       "size": pageSize } });
 
 
+}
+
+function getDiscoveryList(page, pageSize) {
+  if (page === undefined) page = 0;
+  if (pageSize == undefined) pageSize = 5;
+  return (0, _request.default)({
+    method: "GET",
+    url: "/tomato/gae/video/discovery",
+    data: {
+      "page": page,
+      "size": pageSize } });
+
+
+}
+
+function getAlbumList(albumId) {
+  return (0, _request.default)({
+    method: "GET",
+    url: "/tomato/gae/video/album",
+    data: {
+      "albumId": albumId } });
+
+
 }var _default =
 
 {
   getSwiperList: getSwiperList,
-  getRecomendList: getRecomendList };exports.default = _default;
+  getRecomendList: getRecomendList,
+  getDiscoveryList: getDiscoveryList,
+  getAlbumList: getAlbumList };exports.default = _default;
 
 /***/ }),
 /* 47 */
-/*!*********************************************************************!*\
-  !*** /Users/yaohongchao/Documents/vue-proj/movie/common/request.js ***!
-  \*********************************************************************/
+/*!************************************************************************!*\
+  !*** /Users/yaohongchao/Documents/uniapp-proj/movie/common/request.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

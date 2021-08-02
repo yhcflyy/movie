@@ -8,9 +8,10 @@
 			}
 		},
 		{
-			"path": "pages/search/search",
+			"path": "pages/discovery/discovery",
 			"style": {
-				"navigationBarTitleText": "搜索"
+				"navigationBarTitleText": "发现",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -23,6 +24,8 @@
 			"path":"pages/index/index"
 		},{
 			"path":"pages/hot/hot"
+		},{
+			"path":"pages/album-detail/album-detail"
 		}
 	],
 	"globalStyle": {
@@ -43,10 +46,10 @@
 				"selectedIconPath": "static/tabbar_home_sel.png"
 			},
 			{
-				"pagePath": "pages/search/search",
-				"text": "搜索",
-				"iconPath": "static/tabbar_search_nor.png",
-				"selectedIconPath": "static/tabbar_search_sel.png"
+				"pagePath": "pages/discovery/discovery",
+				"text": "发现",
+				"iconPath": "static/tabbar_discovery_nor.png",
+				"selectedIconPath": "static/tabbar_discovery_nor.png"
 			}, {
 				"pagePath": "pages/mine/mine",
 				"text": "我",

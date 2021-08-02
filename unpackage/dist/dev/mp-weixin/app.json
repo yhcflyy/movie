@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/search/search",
+    "pages/discovery/discovery",
     "pages/mine/mine",
     "pages/index/index",
-    "pages/hot/hot"
+    "pages/hot/hot",
+    "pages/album-detail/album-detail"
   ],
   "subPackages": [],
   "window": {
@@ -25,10 +26,10 @@
         "selectedIconPath": "static/tabbar_home_sel.png"
       },
       {
-        "pagePath": "pages/search/search",
-        "text": "搜索",
-        "iconPath": "static/tabbar_search_nor.png",
-        "selectedIconPath": "static/tabbar_search_sel.png"
+        "pagePath": "pages/discovery/discovery",
+        "text": "发现",
+        "iconPath": "static/tabbar_discovery_nor.png",
+        "selectedIconPath": "static/tabbar_discovery_nor.png"
       },
       {
         "pagePath": "pages/mine/mine",

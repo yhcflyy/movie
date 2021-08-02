@@ -11,15 +11,15 @@
 				</view>
 			</swiper-item>
 		</swiper>
-		<view class="album" v-for="item in recommendItems" :key="item.albumId">
+		<block v-for="item in recommendItems" :key="item.albumId">
 			<view class="album-top">
-				<image style="width: 50rpx;height: 50rpx;" src="../../static/hot.png"></image>
+				<image style="width: 30px;height: 30px;" src="../../static/hot.png"></image>
 				<text style="font-size: 16px; margin-left: 10rpx;">{{item.albumTitle}}</text>
 				<view style="flex-grow: 1;"></view>
 
 				<view style="display: flex;align-items: center;" @click="moreAlbum">
 					<text style="font-size: 12px; margin-left: 10rpx;">更多</text>
-					<image style="width: 35rpx;height: 35rpx;" src="../../static/right-arrow.png"></image>
+					<image style="width: 20px;height: 20px;" src="../../static/right-arrow.png"></image>
 				</view>
 			</view>
 			<view class="album-container" @click="gotoDetailPage">
@@ -31,7 +31,7 @@
 					</view>
 				</view>
 			</view>
-		</view>
+		</block>
 	<u-loadmore :status="loadMoreStatus" v-if="recommendItems.length > 0"></u-loadmore>
 	</view>
 </template>
@@ -133,7 +133,7 @@
 		width: calc(100% - 30rpx);
 		height: 400rpx;
 		border-radius: 10rpx;
-		box-shadow: 0 10px 20px 0 rgba(50, 50, 50, 0.1);
+		box-shadow: 0px 0px 20px 0 rgba(50, 50, 50, 0.1);
 		overflow: hidden;
 		/* 修复wx圆角无效果 */
 		transform: translateY(0);
@@ -204,7 +204,7 @@
 		width: 100%;
 		height: 60rpx;
 		/* background-color: #4CD964; */
-		background-image: linear-gradient(to top, #00000021, transparent);
+		background-image: linear-gradient(to top, #00000088, transparent);
 	}
 
 	.video-bottom-text {
