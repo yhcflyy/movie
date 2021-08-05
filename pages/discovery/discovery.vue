@@ -3,7 +3,7 @@
 		<view>
 			<block v-for="album in albums" :key='album.albumId'>
 				<view class="item" @click="albumDetail(album)">
-					<image class="item-image" :src="album.albumImageUrl" webp="true" mode="aspectFill"></image>
+					<common-image class="item-image" :src="album.albumImageUrl"></common-image>
 					<text class="item-title">{{album.albumTitle}}</text>
 					<text class="item-subtitle">{{album.albumDes}}</text>
 				</view>
@@ -75,6 +75,8 @@
 
 <style>
 	.item {
+		display: flex;
+		flex-direction: column;
 		height: 510rpx;
 		padding-bottom: 15rpx;
 		border-radius: 10rpx;
@@ -87,6 +89,7 @@
 	.item-image {
 		width: 100%;
 		height: 390rpx;
+		background-color: #cccccc;
 	}
 
 	.item-title {

@@ -1,0 +1,1 @@
+<view class="view-container"><image class="{{[isImageError?'image-error':'image-normal']}}" src="{{src}}" mode="aspectFill" data-event-opts="{{[['error',[['errorEvent',['$event']]]],['load',[['successEvent',['$event']]]]]}}" binderror="__e" bindload="__e"></image></view>

@@ -1,8 +1,7 @@
 <template>
 	<view class="album-container">
 		<view class="album-item" v-for="video in videos" :key="video.videoId">
-			<image v-bind:src="video.imgUrl" webp="true" class="album-image" :lazy-load="true" :mode="video.imageMode"
-				@error="imageError(video)"></image>
+			<common-image :src="video.imgUrl"></common-image>
 			<view class="video-bottom">
 				<text class="video-bottom-text">{{video.title}}</text>
 			</view>
@@ -16,7 +15,6 @@
 		data() {
 			return {
 				videos: [],
-				imageMode: "aspectFill"
 			}
 		},
 		onLoad(option) {
@@ -28,10 +26,10 @@
 			})
 		},
 		methods: {
-			imageError: function(e) {
-				e.imgUrl = '/static/image_error_white.png'
-				e.imageMode = 'center'
-			},
+	
+		},
+		computed: {
+		
 		}
 	}
 </script>
@@ -54,11 +52,6 @@
 		/* 修复wx圆角无效果 */
 		transform: translateY(0);
 		background-color: #C8C7CC;
-	}
-
-	.album-image {
-		width: 100%;
-		height: 100%;
 	}
 
 	.album-top {

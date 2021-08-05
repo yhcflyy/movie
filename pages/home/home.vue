@@ -3,9 +3,7 @@
 		<swiper class="swiperStyle" autoplay="true" indicator-dots="true" circular="true" indicator-active-color="white"
 			indicator-color="grey">
 			<swiper-item v-for="item in bannerItems" :key="item.id">
-				<image v-bind:src="item.img" class="swiper-image" mode="aspectFill" webp="true" :lazy-load="true">
-				</image>
-				<!-- <u-image width="100%" height="100%" :src="item.img" mode="aspectFill" :lazy-load="true"></u-image> -->
+				<common-image v-bind:src="item.img" class="swiper-image"></common-image>
 				<view class="swiper_bottom">
 					<text class="swiper-item-text">{{item.title}}</text>
 				</view>
@@ -24,8 +22,7 @@
 			</view>
 			<view class="album-container" @click="gotoDetailPage">
 				<view class="album-item" v-for="video in item.videoList" :key="video.videoId">
-					<image v-bind:src="video.imgUrl" :mode="video.imageMode" webp="true" class="swiper-image"
-						:lazy-load="true" @error="imageError(video)"></image>
+					<common-image v-bind:src="video.imgUrl" class="swiper-image"></common-image>
 					<view class="video-bottom">
 						<text class="video-bottom-text">{{video.title}}</text>
 					</view>
@@ -130,6 +127,7 @@
 
 <style>
 	.swiperStyle {
+		background-color: #cccccc;
 		width: calc(100% - 30rpx);
 		height: 400rpx;
 		border-radius: 10rpx;
