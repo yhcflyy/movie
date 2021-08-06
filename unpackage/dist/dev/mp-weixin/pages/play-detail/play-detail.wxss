@@ -1,0 +1,27 @@
+
+.video-container {
+	position: relative;
+	padding-top: 56.25%;/*9/16 */
+}
+.video {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.bottom-container{
+	background-color: #007AFF;
+	width: 100%;
+}
+.text-style{
+	display: block; 
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 15rpx;
+	margin-right: 15rpx;
+	margin-top: 10rpx;
+}
+

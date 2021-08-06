@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"node-modules/uview-ui/components/u-loadmore/u-loadmore":1,"node-modules/uview-ui/components/u-line/u-line":1,"node-modules/uview-ui/components/u-loading/u-loading":1};
+/******/ 		var cssChunks = {"components/common-image/common-image":1,"node-modules/uview-ui/components/u-loadmore/u-loadmore":1,"node-modules/uview-ui/components/u-line/u-line":1,"node-modules/uview-ui/components/u-loading/u-loading":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"node-modules/uview-ui/components/u-loadmore/u-loadmore":"node-modules/uview-ui/components/u-loadmore/u-loadmore","node-modules/uview-ui/components/u-line/u-line":"node-modules/uview-ui/components/u-line/u-line","node-modules/uview-ui/components/u-loading/u-loading":"node-modules/uview-ui/components/u-loading/u-loading"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/common-image/common-image":"components/common-image/common-image","node-modules/uview-ui/components/u-loadmore/u-loadmore":"node-modules/uview-ui/components/u-loadmore/u-loadmore","node-modules/uview-ui/components/u-line/u-line":"node-modules/uview-ui/components/u-line/u-line","node-modules/uview-ui/components/u-loading/u-loading":"node-modules/uview-ui/components/u-loading/u-loading"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

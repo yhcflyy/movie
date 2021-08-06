@@ -1,9 +1,9 @@
 <template>
 	<view>
 		<view>
-			<block v-for="album in albums" :key='album.albumId'>
+			<block v-for="(album,index) in albums" :key='index'>
 				<view class="item" @click="albumDetail(album)">
-					<common-image class="item-image" :src="album.albumImageUrl"></common-image>
+					<image class="item-image" :src="album.albumImageUrl" webp="true" mode="aspectFill"></image>
 					<text class="item-title">{{album.albumTitle}}</text>
 					<text class="item-subtitle">{{album.albumDes}}</text>
 				</view>
@@ -33,6 +33,7 @@
 			this.loadMore(0)
 		},
 		onReachBottom() {
+			console.log("onReachBottom")
 			if (this.page >= this.totalPage) return;
 			this.page++
 			this.loadMore(this.page)
@@ -40,11 +41,14 @@
 		methods: {
 			loadMore(page) {
 				this.loadMoreStatus = "loading"
+				console.log('loading')
 				swiperApi.getDiscoveryList(page).then(res => {
 					if (page >= res.totalPages) {
-						this.loadMoreStatus = "nomore"
+						this.loadMoreStatus = "noMore"
+						console.log('noMore')
 					} else {
-						this.loadMoreStatus = "loadmore"
+						this.loadMoreStatus = "more"
+						console.log('more')
 					}
 					uni.stopPullDownRefresh()
 					this.totalPage = res.totalPages
@@ -59,14 +63,16 @@
 						this.albums = this.albums.concat(res.items)
 					}
 				}).catch(err => {
-					this.loadMoreStatus = "loadmore"
+					this.loadMoreStatus = "more"
+					console.log('more')
 					uni.stopPullDownRefresh()
 				})
 			},
-			albumDetail(param){
+			albumDetail(param) {
 				console.log(param)
 				uni.navigateTo({
-					url: '../album-detail/album-detail?albumId=' + param.albumId+"&albumTitle=" + param.albumTitle,
+					url: '../album-detail/album-detail?albumId=' + param.albumId + "&albumTitle=" + param
+						.albumTitle,
 				})
 			}
 		}
@@ -75,21 +81,19 @@
 
 <style>
 	.item {
-		display: flex;
-		flex-direction: column;
 		height: 510rpx;
 		padding-bottom: 15rpx;
 		border-radius: 10rpx;
 		box-shadow: 0px 0px 30rpx 10rpx rgba(50, 50, 50, 0.1);
 		overflow: hidden;
 		transform: translateY(0);
+		box-sizing: border-box;
 		margin: 15rpx;
 	}
 
 	.item-image {
 		width: 100%;
 		height: 390rpx;
-		background-color: #cccccc;
 	}
 
 	.item-title {

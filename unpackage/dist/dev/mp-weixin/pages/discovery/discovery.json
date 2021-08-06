@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "发现",
   "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100,
   "usingComponents": {
     "u-loadmore": "/node-modules/uview-ui/components/u-loadmore/u-loadmore"
   }

@@ -1,5 +1,6 @@
 
 .swiperStyle {
+	background-color: #cccccc;
 	width: calc(100% - 30rpx);
 	height: 400rpx;
 	border-radius: 10rpx;

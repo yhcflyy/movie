@@ -4,14 +4,16 @@
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 100
 			}
 		},
 		{
 			"path": "pages/discovery/discovery",
 			"style": {
 				"navigationBarTitleText": "发现",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 100
 			}
 		},
 		{
@@ -27,7 +29,16 @@
 		},{
 			"path":"pages/album-detail/album-detail"
 		}
-	],
+	    ,{
+            "path" : "pages/play-detail/play-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -49,7 +60,7 @@
 				"pagePath": "pages/discovery/discovery",
 				"text": "发现",
 				"iconPath": "static/tabbar_discovery_nor.png",
-				"selectedIconPath": "static/tabbar_discovery_nor.png"
+				"selectedIconPath": "static/tabbar_discovery_sel.png"
 			}, {
 				"pagePath": "pages/mine/mine",
 				"text": "我",

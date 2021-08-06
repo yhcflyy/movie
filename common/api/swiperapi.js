@@ -47,9 +47,20 @@ function getAlbumList(albumId){
 	})
 }
 
+function getVideoDetail(videoId){
+	return request({
+		method: "GET",
+		url: "/tomato/gae/video/detail",
+		data: {
+			"videoId": videoId,
+		}
+	})
+}
+
 export default {
 	getSwiperList,
 	getRecomendList,
 	getDiscoveryList,
 	getAlbumList,
+	getVideoDetail,
 }

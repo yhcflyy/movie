@@ -1,7 +1,9 @@
 {
   "navigationBarTitleText": "首页",
   "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100,
   "usingComponents": {
+    "common-image": "/components/common-image/common-image",
     "u-loadmore": "/node-modules/uview-ui/components/u-loadmore/u-loadmore"
   }
 }

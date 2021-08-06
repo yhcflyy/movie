@@ -2,7 +2,7 @@
 	<view class="page">
 		<swiper class="swiperStyle" autoplay="true" indicator-dots="true" circular="true" indicator-active-color="white"
 			indicator-color="grey">
-			<swiper-item v-for="item in bannerItems" :key="item.id">
+			<swiper-item v-for="item in bannerItems" :key="item.id" @click="gotoDetailPage(item)">
 				<common-image v-bind:src="item.img" class="swiper-image"></common-image>
 				<view class="swiper_bottom">
 					<text class="swiper-item-text">{{item.title}}</text>
@@ -15,13 +15,13 @@
 				<text style="font-size: 16px; margin-left: 10rpx;">{{item.albumTitle}}</text>
 				<view style="flex-grow: 1;"></view>
 
-				<view style="display: flex;align-items: center;" @click="moreAlbum">
+				<view style="display: flex;align-items: center;" @click="moreAlbum(item)">
 					<text style="font-size: 12px; margin-left: 10rpx;">更多</text>
 					<image style="width: 20px;height: 20px;" src="../../static/right-arrow.png"></image>
 				</view>
 			</view>
-			<view class="album-container" @click="gotoDetailPage">
-				<view class="album-item" v-for="video in item.videoList" :key="video.videoId">
+			<view class="album-container">
+				<view class="album-item" v-for="(video,index) in item.videoList" :key="index" @click="gotoDetailPage(video)">
 					<common-image v-bind:src="video.imgUrl" class="swiper-image"></common-image>
 					<view class="video-bottom">
 						<text class="video-bottom-text">{{video.title}}</text>
@@ -58,14 +58,23 @@
 				e.imgUrl = '/static/image_error_white.png'
 				e.imageMode = 'center'
 			},
-			gotoDetailPage: function(e) {
+			gotoDetailPage: function(param) {
+				let videoId = 0
+				if (param.videoId !== undefined){
+					videoId = param.videoId
+				}else if (param.url !== undefined && param.url.startsWith('video://') == true){
+					videoId = param.videoId
+					let id = param.url.replace("video://","")
+					videoId = id
+				}
 				uni.navigateTo({
-					url: '../index/index'
+					url: '../play-detail/play-detail?videoId=' + videoId
 				})
 			},
-			moreAlbum: function(e) {
+			moreAlbum: function(param) {
 				uni.navigateTo({
-					url: '../hot/hot'
+					url: '../album-detail/album-detail?albumId=' + param.albumId + "&albumTitle=" + param
+						.albumTitle,
 				})
 			},
 			refresh(page) {

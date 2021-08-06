@@ -1,6 +1,6 @@
 <template>
 	<view class="view-container">
-		<image :src="src" :class='isImageError ? "image-error" : "image-normal"' mode="aspectFill"
+		<image :src="src" :class='isImageError ? "image-error" : "image-normal"' webp="true" mode="aspectFill"
 			@error="errorEvent" @load="successEvent"></image>
 	</view>
 </template>

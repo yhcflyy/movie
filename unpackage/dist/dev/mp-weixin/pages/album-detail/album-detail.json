@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "common-image": "/components/common-image/common-image"
+  }
 }

@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/index/index",
     "pages/hot/hot",
-    "pages/album-detail/album-detail"
+    "pages/album-detail/album-detail",
+    "pages/play-detail/play-detail"
   ],
   "subPackages": [],
   "window": {
@@ -29,7 +30,7 @@
         "pagePath": "pages/discovery/discovery",
         "text": "发现",
         "iconPath": "static/tabbar_discovery_nor.png",
-        "selectedIconPath": "static/tabbar_discovery_nor.png"
+        "selectedIconPath": "static/tabbar_discovery_sel.png"
       },
       {
         "pagePath": "pages/mine/mine",
