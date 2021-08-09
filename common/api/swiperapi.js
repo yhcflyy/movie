@@ -57,10 +57,21 @@ function getVideoDetail(videoId){
 	})
 }
 
+function getSuggestion(videoId){
+	return request({
+		method: "GET",
+		url: "/tomato/gae/video/suggest",
+		data: {
+			"videoId": videoId,
+		}
+	})
+}
+
 export default {
 	getSwiperList,
 	getRecomendList,
 	getDiscoveryList,
 	getAlbumList,
 	getVideoDetail,
+	getSuggestion,
 }
